@@ -63,7 +63,7 @@ const App = () => {
         const signer = provider.getSigner();
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-        const loader = document.querySelector("#loader");
+        const loader = document.getElementById("loader");
 
         let count = await wavePortalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
@@ -108,7 +108,7 @@ const App = () => {
           Wave at Me
         </button>
 
-        <div id="loader" style="display: none">Loading...</div>
+        <div id="loader">Loading...</div>
 
         {!currentAccount && (
           <button className="waveButton" onClick={connectWallet}>
