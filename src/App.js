@@ -108,7 +108,7 @@ const App = () => {
           Wave at Me
         </button>
 
-        <div id="loader">Loading...</div>
+        <div id="loader" style="display: none">Loading...</div>
 
         {!currentAccount && (
           <button className="waveButton" onClick={connectWallet}>
