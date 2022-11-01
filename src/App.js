@@ -17,7 +17,7 @@ export default function App() {
         </div>
 
         <div className="bio">
-        I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
+        I am Abhay. This is my personal social wall built on the blockchain and secured by smart contracts. Feel free to drop a message, a link to your favorite Spotify playlist, or anything that you want to share with the world!
         </div>
 
         <button className="waveButton" onClick={wave}>
