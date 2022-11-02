@@ -8,7 +8,7 @@ const App = () => {
   /**
    * Create a varaible here that holds the contract address after you deploy!
    */
-  const contractAddress = "0x951ccd12C35a4baD588B4F39aA30BC5E83d04Fd0";
+  const contractAddress = "0x954839CbBf95C5a4b7F9b1648Cd5Ff0dEE2c00f2";
   const contractABI = abi.abi;
   
   const checkIfWalletIsConnected = async () => {
@@ -101,7 +101,7 @@ const App = () => {
         </div>
 
         <button className="waveButton" onClick={wave}>
-          Wave at Me
+          Say Hello!
         </button>
 
         {!currentAccount && (
