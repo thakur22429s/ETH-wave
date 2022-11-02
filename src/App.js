@@ -12,7 +12,7 @@ const App = () => {
   const contractAddress = "0x954839CbBf95C5a4b7F9b1648Cd5Ff0dEE2c00f2";
   const contractABI = abi.abi;
 
-  const waveMessage = "default message";
+  var waveMessage = "default message";
 
   const getAllWaves = async () => {
     try {
