@@ -12,6 +12,8 @@ const App = () => {
   const contractAddress = "0x954839CbBf95C5a4b7F9b1648Cd5Ff0dEE2c00f2";
   const contractABI = abi.abi;
 
+  const waveMessage = "default message";
+
   const getAllWaves = async () => {
     try {
       const { ethereum } = window;
@@ -96,6 +98,8 @@ const App = () => {
   }
 
   const wave = async () => {
+    waveMessage = document.getElementById("waveMessage").value;
+    
     try {
       const { ethereum } = window;
 
@@ -107,7 +111,7 @@ const App = () => {
         let count = await wavePortalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
 
-        const waveTxn = await wavePortalContract.wave();
+        const waveTxn = await wavePortalContract.wave(waveMessage);
         console.log("Mining...", waveTxn.hash);
 
         await waveTxn.wait();
@@ -140,6 +144,10 @@ const App = () => {
           Feel free to drop a message, a link to your favorite Spotify playlist,
           or anything that you want to share with the world!
         </div>
+
+        <textarea id="waveMessage" name="waveMessage">
+          {waveMessage}
+        </textarea>
 
         <button className="waveButton" onClick={wave}>
           Say Hello!
