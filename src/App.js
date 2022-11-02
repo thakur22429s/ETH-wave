@@ -9,10 +9,10 @@ const App = () => {
   /**
    * Create a varaible here that holds the contract address after you deploy!
    */
-  const contractAddress = "0x954839CbBf95C5a4b7F9b1648Cd5Ff0dEE2c00f2";
+  const contractAddress = "0x2777dc78b417a2E7bda86eC2FA061dDa491F142f";
   const contractABI = abi.abi;
 
-  var waveMessage = "default message";
+  var waveMessage = "Howdy?";
 
   const getAllWaves = async () => {
     try {
@@ -145,8 +145,7 @@ const App = () => {
           or anything that you want to share with the world!
         </div>
 
-        <textarea id="waveMessage" name="waveMessage">
-          {waveMessage}
+        <textarea id="waveMessage" name="waveMessage" placeholder={waveMessage}>
         </textarea>
 
         <button className="waveButton" onClick={wave}>
